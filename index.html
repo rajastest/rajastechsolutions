@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raja's Tech Solutions - Digital Service Centre</title>
+  <!-- Google Fonts & Lucide Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root {
+      --bg-dark: #080d1a;
+      --card-bg: #0f172a;
+      --card-border: #1e293b;
+      --cyan-accent: #00e5ff;
+      --green-whatsapp: #25d366;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Header / Navbar */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(8, 13, 26, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand img {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      background: #ffffff;
+      padding: 2px;
+      object-fit: contain;
+    }
+
+    .brand-text h1 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.5px;
+    }
+
+    .brand-text span {
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: var(--cyan-accent);
+      letter-spacing: 1.5px;
+      display: block;
+      text-transform: uppercase;
+    }
+
+    .nav-btn {
+      background: rgba(0, 229, 255, 0.1);
+      border: 1px solid var(--cyan-accent);
+      color: var(--cyan-accent);
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Container */
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 24px 20px;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 30px 0 20px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0, 229, 255, 0.08);
+      border: 1px solid rgba(0, 229, 255, 0.3);
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--cyan-accent);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      background-color: var(--cyan-accent);
+      border-radius: 50%;
+    }
+
+    .hero-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 14px;
+      letter-spacing: -1px;
+    }
+
+    .hero-title span {
+      color: var(--cyan-accent);
+      display: block;
+    }
+
+    .hero-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 24px;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-cyan {
+      background: var(--cyan-accent);
+      color: #000;
+    }
+
+    .btn-outline {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: #fff;
+    }
+
+    .btn-whatsapp {
+      background: var(--green-whatsapp);
+      color: #fff;
+    }
+
+    /* Section Styling */
+    .section-title {
+      font-size: 0.8rem;
+      color: var(--cyan-accent);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title::before {
+      content: '';
+      width: 16px;
+      height: 2px;
+      background: var(--cyan-accent);
+    }
+
+    .heading-lg {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .icon-box {
+      width: 44px;
+      height: 44px;
+      background: rgba(0, 229, 255, 0.1);
+      color: var(--cyan-accent);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .service-list {
+      list-style: none;
+      margin-bottom: 16px;
+    }
+
+    .service-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+    }
+
+    .service-list li i {
+      color: var(--cyan-accent);
+      width: 16px;
+      height: 16px;
+    }
+
+    .price-pill {
+      display: inline-block;
+      background: rgba(37, 211, 102, 0.1);
+      border: 1px solid var(--green-whatsapp);
+      color: var(--green-whatsapp);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+
+    /* Disclaimer */
+    .disclaimer {
+      background: rgba(239, 68, 68, 0.08);
+      border: 1px solid rgba(239, 68, 68, 0.25);
+      border-radius: 14px;
+      padding: 16px;
+      font-size: 0.85rem;
+      color: #fca5a5;
+      margin: 24px 0;
+    }
+
+    /* Contact Details Grid */
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 16px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .contact-item .icon-box {
+      flex-shrink: 0;
+    }
+
+    .contact-item .info h4 {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .contact-item .info p {
+      font-size: 0.95rem;
+      font-weight: 600;
+      word-break: break-all;
+    }
+
+    /* Form */
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text-muted);
+    }
+
+    .form-control {
+      width: 100%;
+      background: #080d1a;
+      border: 1px solid var(--card-border);
+      color: #fff;
+      padding: 12px 14px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      outline: none;
+    }
+
+    .form-control:focus {
+      border-color: var(--cyan-accent);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="#" class="brand">
+      <img src="logo.png" alt="Raja's Tech Solutions Logo">
+      <div class="brand-text">
+        <h1>Raja's</h1>
+        <span>Tech Solutions</span>
+      </div>
+    </a>
+    <a href="tel:+917845865414" class="nav-btn">
+      <i data-lucide="phone" style="width: 16px; height: 16px;"></i> Call
+    </a>
+  </header>
+
+  <div class="container">
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="badge">
+        <span class="badge-dot"></span>
+        Digital Service Centre - Tamil Nadu
+      </div>
+      <h2 class="hero-title">
+        Your Digital World,<br>
+        <span>Made Simple.</span>
+      </h2>
+      <p class="hero-desc">
+        Your trusted destination for document duplication, digital printing, government e-service applications, money transfer, and everyday computer & internet services.
+      </p>
+
+      <div class="btn-group">
+        <a href="#services" class="btn btn-cyan">Explore Our Services <i data-lucide="arrow-right"></i></a>
+        <a href="#contact" class="btn btn-outline">Contact Us</a>
+        <a href="https://wa.me/917845865414" class="btn btn-whatsapp"><i data-lucide="message-circle"></i> Chat on WhatsApp</a>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" style="padding-top: 30px;">
+      <div class="section-title">What We Do</div>
+      <h3 class="heading-lg">Our Core Services</h3>
+
+      <!-- 1. Money Transfer -->
+      <div class="card">
+        <div class="card-header">
+          <div class="icon-box"><i data-lucide="indian-rupee"></i></div>
+          <div>
+            <div class="price-pill">Best Price & Low Fee</div>
+            <div class="card-title">Money Transfer & Cash Services</div>
+          </div>
+        </div>
+        <ul class="service-list">
+          <li><i data-lucide="check"></i> Instant Domestic Money Transfer (IMPS/NEFT)</li>
+          <li><i data-lucide="check"></i> AEPS (Aadhaar Card Cash Withdrawal)</li>
+          <li><i data-lucide="check"></i> UPI & Net Banking Assistance</li>
+          <li><i data-lucide="check"></i> Utility Bill & Recharge Payments</li>
+        </ul>
+        <a href="https://wa.me/917845865414?text=Hello,%20I%20need%20assistance%20with%20Money%20Transfer." class="btn btn-outline" style="padding: 10px; font-size: 0.85rem;">Enquire on WhatsApp</a>
+      </div>
+
+      <!-- 2. Digital Printing -->
+      <div class="card">
+        <div class="card-header">
+          <div class="icon-box"><i data-lucide="printer"></i></div>
+          <div>
+            <div class="price-pill">Low Price - High Quality</div>
+            <div class="card-title">Digital Printing & Photocopy</div>
+          </div>
+        </div>
+        <ul class="service-list">
+          <li><i data-lucide="check"></i> Colour and black-and-white printing</li>
+          <li><i data-lucide="check"></i> High-speed photocopy & document scanning</li>
+          <li><i data-lucide="check"></i> Application and certificate printing</li>
+          <li><i data-lucide="check"></i> ID card printing & lamination</li>
+        </ul>
+        <a href="https://wa.me/917845865414?text=Hello,%20I%20need%20assistance%20with%20Printing/Xerox." class="btn btn-outline" style="padding: 10px; font-size: 0.85rem;">Enquire on WhatsApp</a>
+      </div>
+
+      <!-- 3. Government E-Services -->
+      <div class="card">
+        <div class="card-header">
+          <div class="icon-box"><i data-lucide="file-text"></i></div>
+          <div>
+            <div class="price-pill">Guaranteed Service Support</div>
+            <div class="card-title">Government E-Service Applications</div>
+          </div>
+        </div>
+        <ul class="service-list">
+          <li><i data-lucide="check"></i> Online government certificate applications</li>
+          <li><i data-lucide="check"></i> Community, Income, Nativity certificates</li>
+          <li><i data-lucide="check"></i> Smart Card, Voter ID & PAN Card services</li>
+          <li><i data-lucide="check"></i> Employment registration & exam form filling</li>
+        </ul>
+        <a href="https://wa.me/917845865414?text=Hello,%20I%20need%20help%20with%20Government%20E-Services." class="btn btn-outline" style="padding: 10px; font-size: 0.85rem;">Enquire on WhatsApp</a>
+      </div>
+
+      <!-- 4. Basic Computer & Internet Services -->
+      <div class="card">
+        <div class="card-header">
+          <div class="icon-box"><i data-lucide="laptop"></i></div>
+          <div>
+            <div class="card-title">Basic Computer & Internet Services</div>
+          </div>
+        </div>
+        <ul class="service-list">
+          <li><i data-lucide="check"></i> English & Tamil typing works</li>
+          <li><i data-lucide="check"></i> Email creation and password recovery</li>
+          <li><i data-lucide="check"></i> PDF merging, editing, and file conversion</li>
+          <li><i data-lucide="check"></i> Online job application form filling</li>
+        </ul>
+        <a href="https://wa.me/917845865414?text=Hello,%20I%20need%20help%20with%20Computer/Typing%20services." class="btn btn-outline" style="padding: 10px; font-size: 0.85rem;">Enquire on WhatsApp</a>
+      </div>
+
+      <!-- Legal Disclaimer -->
+      <div class="disclaimer">
+        <strong>Disclaimer:</strong> We are a private digital service centre. We are not affiliated with, endorsed by, or acting on behalf of any government body, and submitting an application does not guarantee its approval.
+      </div>
+    </section>
+
+    <!-- WhatsApp Enquiry Form -->
+    <section style="padding-top: 20px;">
+      <div class="section-title">Quick Enquiry</div>
+      <h3 class="heading-lg">Send an Enquiry</h3>
+      <div class="card">
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">
+          Submitting opens WhatsApp directly with your details prefilled.
+        </p>
+
+        <form id="enquiryForm" onsubmit="handleFormSubmit(event)">
+          <div class="form-group">
+            <label for="userName">Your Name *</label>
+            <input type="text" id="userName" class="form-control" placeholder="e.g. Ramesh Kumar" required>
+          </div>
+
+          <div class="form-group">
+            <label for="userPhone">Phone Number</label>
+            <input type="tel" id="userPhone" class="form-control" placeholder="e.g. 98765 43210">
+          </div>
+
+          <div class="form-group">
+            <label for="serviceReq">Service Required *</label>
+            <select id="serviceReq" class="form-control" required>
+              <option value="">Select a service</option>
+              <option value="Money Transfer & Cash Services">Money Transfer & Cash Services</option>
+              <option value="Photocopy & Scan">Photocopy & Scan</option>
+              <option value="Digital / Colour Printing">Digital / Colour Printing</option>
+              <option value="Government E-Service Forms">Govt E-Service Certificate Applications</option>
+              <option value="PAN Card / Smart Card / Voter ID">PAN / Smart Card / Voter ID</option>
+              <option value="Document Typing & PDF Work">Document Typing & PDF Work</option>
+              <option value="Other Computer Services">Other Computer Services</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="userMsg">Message (Optional)</label>
+            <textarea id="userMsg" class="form-control" rows="3" placeholder="Tell us briefly what you need..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-whatsapp" style="width: 100%; margin-top: 10px;">
+            <i data-lucide="message-circle"></i> Send via WhatsApp
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Contact & Location Section -->
+    <section id="contact" style="padding-top: 20px;">
+      <div class="section-title">Get In Touch</div>
+      <h3 class="heading-lg">Visit Us or Reach Out</h3>
+
+      <a href="tel:+917845865414" class="contact-item">
+        <div class="icon-box"><i data-lucide="phone"></i></div>
+        <div class="info">
+          <h4>Call Now</h4>
+          <p>+91 7845865414</p>
+        </div>
+      </a>
+
+      <a href="https://wa.me/917845865414" class="contact-item">
+        <div class="icon-box" style="color: var(--green-whatsapp);"><i data-lucide="message-circle"></i></div>
+        <div class="info">
+          <h4>Chat on WhatsApp</h4>
+          <p>+91 7845865414</p>
+        </div>
+      </a>
+
+      <a href="mailto:rajastechsolutions@gmail.com" class="contact-item">
+        <div class="icon-box" style="color: var(--cyan-accent);"><i data-lucide="mail"></i></div>
+        <div class="info">
+          <h4>Email Us</h4>
+          <p>rajastechsolutions@gmail.com</p>
+        </div>
+      </a>
+
+      <div class="contact-item">
+        <div class="icon-box"><i data-lucide="map-pin"></i></div>
+        <div class="info">
+          <h4>Shop Address</h4>
+          <p>Muthu Complex, Murappanadu, Tirunelveli - Thoothukudi Road, Tamil Nadu</p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="icon-box"><i data-lucide="clock"></i></div>
+        <div class="info">
+          <h4>Business Hours</h4>
+          <p>Mon - Sat: 9:00 AM - 8:30 PM<br><span style="color: #f87171;">Sunday: Closed</span></p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p><strong>Raja's Tech Solutions</strong></p>
+    <p style="margin: 6px 0;">Muthu Complex, Murappanadu, Tamil Nadu</p>
+    <p style="font-size: 0.75rem; color: #64748b;">© 2026 Raja's Tech Solutions. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Handle Form to WhatsApp Redirection
+    function handleFormSubmit(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('userName').value.trim();
+      const phone = document.getElementById('userPhone').value.trim();
+      const service = document.getElementById('serviceReq').value;
+      const message = document.getElementById('userMsg').value.trim();
+
+      let text = `*New Service Enquiry - Raja's Tech Solutions*%0A%0A`;
+      text += `*Name:* ${encodeURIComponent(name)}%0A`;
+      if (phone) text += `*Phone:* ${encodeURIComponent(phone)}%0A`;
+      text += `*Service Required:* ${encodeURIComponent(service)}%0A`;
+      if (message) text += `*Message:* ${encodeURIComponent(message)}%0A`;
+
+      const whatsappURL = `https://wa.me/917845865414?text=${text}`;
+      window.open(whatsappURL, '_blank');
+    }
+  </script>
+</body>
+</html>
