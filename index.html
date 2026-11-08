@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="ta">
 <head>
-    <meta charset="UTF-8">
-    <title>Raja's Tech Solutions -Digital e-Services on Tirunelveli</title>
-    
-    <!-- AdSense Code -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5764684102668966"
-         crossorigin="anonymous"></script>
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raja's Tech Solutions - Digital & E-Services Centre Tirunelveli</title>
+  <meta name="description" content="Authorized digital e-services, Aadhaar, PAN card, Smart card, online government applications, document printing, and money transfer at Murappanadu, Tirunelveli.">
+  <meta name="keywords" content="Raja's Tech Solutions, Tirunelveli e-service, Murappanadu xerox, Aadhaar card download, PAN card apply, online government services Tamil Nadu">
+  <meta name="author" content="Raja's Tech Solutions">
+
+  <!-- Google AdSense Code -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5764684102668966"
+       crossorigin="anonymous"></script>
+
   <!-- Google Fonts & Lucide Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@400;500;600;700;800&family=Audiowide&family=Michroma&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Rajdhani:wght@500;600;700&family=Exo+2:wght@400;600;700&family=Audiowide&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
@@ -21,6 +25,7 @@
       --card-border: #1e293b;
       --cyan-accent: #00e5ff;
       --green-whatsapp: #25d366;
+      --yt-red: #ff0000;
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
     }
@@ -34,19 +39,18 @@
     }
 
     body {
-    font-family: 'Orbitron', sans-serif;
       background-color: var(--bg-dark);
       color: var(--text-main);
       line-height: 1.6;
       overflow-x: hidden;
     }
 
-    /* Header / Navbar */
+    /* Header */
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(8, 13, 26, 0.85);
+      background: rgba(8, 13, 26, 0.92);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--card-border);
       padding: 12px 20px;
@@ -72,6 +76,7 @@
     }
 
     .brand-text h1 {
+      font-family: 'Orbitron', sans-serif;
       font-size: 1.15rem;
       font-weight: 800;
       color: #fff;
@@ -103,12 +108,12 @@
 
     /* Container */
     .container {
-      max-width: 600px;
+      max-width: 720px;
       margin: 0 auto;
       padding: 24px 20px;
     }
 
-    /* Hero Section */
+    /* Hero */
     .hero {
       text-align: center;
       padding: 30px 0 20px;
@@ -138,11 +143,11 @@
     }
 
     .hero-title {
-      font-size: 2.2rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.1rem;
       font-weight: 800;
-      line-height: 1.2;
+      line-height: 1.25;
       margin-bottom: 14px;
-      letter-spacing: -1px;
     }
 
     .hero-title span {
@@ -152,7 +157,7 @@
 
     .hero-desc {
       color: var(--text-muted);
-      font-size: 0.95rem;
+      font-size: 1rem;
       margin-bottom: 24px;
     }
 
@@ -177,29 +182,18 @@
       transition: all 0.2s ease;
     }
 
-    .btn-cyan {
-      background: var(--cyan-accent);
-      color: #000;
-    }
+    .btn-cyan { background: var(--cyan-accent); color: #000; }
+    .btn-outline { background: var(--card-bg); border: 1px solid var(--card-border); color: #fff; }
+    .btn-whatsapp { background: var(--green-whatsapp); color: #fff; }
+    .btn-yt { background: var(--yt-red); color: #fff; }
 
-    .btn-outline {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      color: #fff;
-    }
-
-    .btn-whatsapp {
-      background: var(--green-whatsapp);
-      color: #fff;
-    }
-
-    /* Section Styling */
+    /* Section Headers */
     .section-title {
+      font-family: 'Audiowide', sans-serif;
       font-size: 0.8rem;
       color: var(--cyan-accent);
       text-transform: uppercase;
       letter-spacing: 1.5px;
-      font-weight: 700;
       margin-bottom: 8px;
       display: flex;
       align-items: center;
@@ -214,9 +208,10 @@
     }
 
     .heading-lg {
+      font-family: 'Orbitron', sans-serif;
       font-size: 1.5rem;
       font-weight: 700;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     /* Cards */
@@ -224,8 +219,8 @@
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: 16px;
-      padding: 20px;
-      margin-bottom: 16px;
+      padding: 22px;
+      margin-bottom: 20px;
     }
 
     .card-header {
@@ -244,10 +239,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-shrink: 0;
     }
 
     .card-title {
-      font-size: 1.15rem;
+      font-family: 'Exo 2', sans-serif;
+      font-size: 1.2rem;
       font-weight: 700;
     }
 
@@ -261,7 +258,7 @@
       align-items: center;
       gap: 10px;
       color: var(--text-muted);
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       margin-bottom: 8px;
     }
 
@@ -271,6 +268,23 @@
       height: 16px;
     }
 
+    .content-box {
+      background: rgba(8, 13, 26, 0.6);
+      border-left: 3px solid var(--cyan-accent);
+      padding: 12px 14px;
+      border-radius: 4px;
+      margin: 14px 0;
+      font-size: 0.88rem;
+      color: #cbd5e1;
+    }
+
+    .content-box h4 {
+      font-family: 'Exo 2', sans-serif;
+      color: var(--cyan-accent);
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+    }
+
     .price-pill {
       display: inline-block;
       background: rgba(37, 211, 102, 0.1);
@@ -278,9 +292,29 @@
       color: var(--green-whatsapp);
       font-size: 0.75rem;
       font-weight: 700;
-      padding: 4px 10px;
+      padding: 3px 8px;
       border-radius: 6px;
-      margin-bottom: 12px;
+      margin-bottom: 6px;
+    }
+
+    /* Video Frame */
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-bottom: 14px;
+      border: 1px solid var(--card-border);
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
     }
 
     /* Disclaimer */
@@ -308,10 +342,6 @@
       margin-bottom: 12px;
     }
 
-    .contact-item .icon-box {
-      flex-shrink: 0;
-    }
-
     .contact-item .info h4 {
       font-size: 0.75rem;
       color: var(--text-muted);
@@ -325,11 +355,8 @@
       word-break: break-all;
     }
 
-    /* Form */
-    .form-group {
-      margin-bottom: 14px;
-    }
-
+    /* Forms */
+    .form-group { margin-bottom: 14px; }
     .form-group label {
       display: block;
       font-size: 0.85rem;
@@ -353,34 +380,84 @@
       border-color: var(--cyan-accent);
     }
 
-    /* Footer */
+    /* Footer & Legal Links */
     footer {
       border-top: 1px solid var(--card-border);
-      padding: 30px 20px;
+      padding: 36px 20px 24px;
       text-align: center;
       font-size: 0.85rem;
       color: var(--text-muted);
     }
 
-    /* Tech font accents */
-    .brand-text h1,
-    .hero-title,
-    .heading-lg {
+    .legal-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin: 16px 0;
+    }
+
+    .legal-links a {
+      color: var(--cyan-accent);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .legal-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Modal Styling */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(5px);
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .modal-content {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 24px;
+      position: relative;
+      color: var(--text-main);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 18px;
+      font-size: 1.5rem;
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+
+    .modal-content h3 {
       font-family: 'Orbitron', sans-serif;
+      margin-bottom: 14px;
+      color: var(--cyan-accent);
     }
 
-    .card-title {
-      font-family: 'Exo 2', sans-serif;
+    .modal-content p, .modal-content ul {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
     }
 
-    .section-title {
-      font-family: 'Audiowide', sans-serif;
+    .modal-content ul {
+      padding-left: 20px;
     }
-
-    .badge {
-      font-family: 'Michroma', sans-serif;
-    }
-
   </style>
 </head>
 <body>
@@ -388,7 +465,7 @@
   <!-- Header -->
   <header>
     <a href="#" class="brand">
-      <img src="logo.png" alt="Raja's Tech Solutions Logo">
+      <img src="logo.png" alt="Raja's Tech Solutions Logo" onerror="this.style.display='none'">
       <div class="brand-text">
         <h1>Raja's</h1>
         <span>Tech Solutions</span>
@@ -405,118 +482,174 @@
     <section class="hero">
       <div class="badge">
         <span class="badge-dot"></span>
-        Digital Service Centre - Tamil Nadu
+        Digital Service Centre - Tirunelveli & Thoothukudi
       </div>
       <h2 class="hero-title">
         Your Digital World,<br>
         <span>Made Simple.</span>
       </h2>
       <p class="hero-desc">
-        Your trusted destination for document duplication, digital printing, government e-service applications, money transfer, and everyday computer & internet services.
+        Raja's Tech Solutions is your trusted neighborhood technology partner for Government e-Services, PAN card facilitation, Fast Xerox, Digital Printing, and Money Transfer services in Murappanadu.
       </p>
 
       <div class="btn-group">
-        <a href="#services" class="btn btn-cyan">Explore Our Services <i data-lucide="arrow-right"></i></a>
-        <a href="#contact" class="btn btn-outline">Contact Us</a>
+        <a href="#services" class="btn btn-cyan">Explore All Services <i data-lucide="arrow-right"></i></a>
+        <a href="#youtube" class="btn btn-yt"><i data-lucide="play-circle"></i> Watch Tutorials on YouTube</a>
         <a href="https://wa.me/917845865414" class="btn btn-whatsapp"><i data-lucide="message-circle"></i> Chat on WhatsApp</a>
       </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" style="padding-top: 30px;">
-      <div class="section-title">What We Do</div>
-      <h3 class="heading-lg">Our Core Services</h3>
+    <!-- Services & Rich Articles Section -->
+    <section id="services" style="padding-top: 20px;">
+      <div class="section-title">Verified Services</div>
+      <h3 class="heading-lg">Core Service Guides</h3>
 
-      <!-- 1. Money Transfer -->
-      <div class="card">
-        <div class="card-header">
-          <div class="icon-box"><i data-lucide="indian-rupee"></i></div>
-          <div>
-            <div class="price-pill">Best Price & Low Fee</div>
-            <div class="card-title">Money Transfer & Cash Services</div>
-          </div>
-        </div>
-        <ul class="service-list">
-          <li><i data-lucide="check"></i> Instant Domestic Money Transfer (IMPS/NEFT)</li>
-          <li><i data-lucide="check"></i> AEPS (Aadhaar Card Cash Withdrawal)</li>
-          <li><i data-lucide="check"></i> UPI & Net Banking Assistance</li>
-          <li><i data-lucide="check"></i> Utility Bill & Recharge Payments</li>
-        </ul>
-        <a href="https://wa.me/917845865414?text=Hello,%20I%20need%20assistance%20with%20Money%20Transfer." class="btn btn-outline" style="padding: 10px; font-size: 0.85rem;">Enquire on WhatsApp</a>
-      </div>
-
-      <!-- 2. Digital Printing -->
-      <div class="card">
-        <div class="card-header">
-          <div class="icon-box"><i data-lucide="printer"></i></div>
-          <div>
-            <div class="price-pill">Low Price - High Quality</div>
-            <div class="card-title">Digital Printing & Photocopy</div>
-          </div>
-        </div>
-        <ul class="service-list">
-          <li><i data-lucide="check"></i> Colour and black-and-white printing</li>
-          <li><i data-lucide="check"></i> High-speed photocopy & document scanning</li>
-          <li><i data-lucide="check"></i> Application and certificate printing</li>
-          <li><i data-lucide="check"></i> ID card printing & lamination</li>
-        </ul>
-        <a href="https://wa.me/917845865414?text=Hello,%20I%20need%20assistance%20with%20Printing/Xerox." class="btn btn-outline" style="padding: 10px; font-size: 0.85rem;">Enquire on WhatsApp</a>
-      </div>
-
-      <!-- 3. Government E-Services -->
+      <!-- 1. Government E-Services -->
       <div class="card">
         <div class="card-header">
           <div class="icon-box"><i data-lucide="file-text"></i></div>
           <div>
-            <div class="price-pill">Guaranteed Service Support</div>
-            <div class="card-title">Government E-Service Applications</div>
+            <div class="price-pill">Assisted Application Support</div>
+            <div class="card-title">Government E-Service & Certificates</div>
           </div>
         </div>
+        <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 12px;">
+          Applying for Tamil Nadu government welfare certificates and public portals can often be complex. We assist rural and local citizens in filing digital applications accurately on the official e-Sevai portal.
+        </p>
+        
+        <div class="content-box">
+          <h4>Required Documents for Certificate Applications:</h4>
+          <ul>
+            <li>Community / Income / Nativity: Ration Card, Aadhaar Card, School TC, and Photo.</li>
+            <li>Patta / Chitta Online Extraction: Survey number, sub-division number, and village details.</li>
+            <li>Voter ID & Smart Card Updates: Existing card proof, address proof, and active mobile number.</li>
+          </ul>
+        </div>
+
         <ul class="service-list">
-          <li><i data-lucide="check"></i> Online government certificate applications</li>
-          <li><i data-lucide="check"></i> Community, Income, Nativity certificates</li>
-          <li><i data-lucide="check"></i> Smart Card, Voter ID & PAN Card services</li>
-          <li><i data-lucide="check"></i> Employment registration & exam form filling</li>
+          <li><i data-lucide="check"></i> Online Government Certificate Applications (Income, Community, Nativity)</li>
+          <li><i data-lucide="check"></i> Patta, Chitta, EC (Encumbrance Certificate) Downloads</li>
+          <li><i data-lucide="check"></i> Smart Card (Family Ration Card) Correction & Member Additions</li>
+          <li><i data-lucide="check"></i> Voter ID Registration, Correction, and PVC Card Printing</li>
         </ul>
-        <a href="https://wa.me/917845865414?text=Hello,%20I%20need%20help%20with%20Government%20E-Services." class="btn btn-outline" style="padding: 10px; font-size: 0.85rem;">Enquire on WhatsApp</a>
+        <a href="https://wa.me/917845865414?text=Hello,%20I%20need%20help%20with%20Government%20E-Services." class="btn btn-outline" style="padding: 10px; font-size: 0.85rem;">Enquire for Application Assistance</a>
       </div>
 
-      <!-- 4. Basic Computer & Internet Services -->
+      <!-- 2. PAN Card & Financial Assistance -->
       <div class="card">
         <div class="card-header">
-          <div class="icon-box"><i data-lucide="laptop"></i></div>
+          <div class="icon-box"><i data-lucide="credit-card"></i></div>
           <div>
-            <div class="card-title">Basic Computer & Internet Services</div>
+            <div class="price-pill">Fast Processing</div>
+            <div class="card-title">New PAN Card & Corrections</div>
           </div>
         </div>
+        <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 12px;">
+          Whether you need a new Permanent Account Number (PAN) for banking or need to update your name, photo, or father's name, we provide error-free filing assistance through NSDL/UTIITSL portals.
+        </p>
+
+        <div class="content-box">
+          <h4>What You Should Know:</h4>
+          <p>Instant e-PAN can be generated within 1 to 2 hours if your mobile number is linked with Aadhaar. Physical PVC PAN cards will be delivered by Indian Post to your registered doorstep address within 10 to 15 working days.</p>
+        </div>
+
         <ul class="service-list">
-          <li><i data-lucide="check"></i> English & Tamil typing works</li>
-          <li><i data-lucide="check"></i> Email creation and password recovery</li>
-          <li><i data-lucide="check"></i> PDF merging, editing, and file conversion</li>
-          <li><i data-lucide="check"></i> Online job application form filling</li>
+          <li><i data-lucide="check"></i> New PAN Card Application for Individuals and Minors</li>
+          <li><i data-lucide="check"></i> Correction of Name, Date of Birth, and Father's Name on PAN</li>
+          <li><i data-lucide="check"></i> Aadhaar-PAN Linking Assistance & e-KYC Verification</li>
         </ul>
-        <a href="https://wa.me/917845865414?text=Hello,%20I%20need%20help%20with%20Computer/Typing%20services." class="btn btn-outline" style="padding: 10px; font-size: 0.85rem;">Enquire on WhatsApp</a>
+        <a href="https://wa.me/917845865414?text=Hello,%20I%20need%20PAN%20Card%20Assistance." class="btn btn-outline" style="padding: 10px; font-size: 0.85rem;">Apply for PAN Card</a>
       </div>
 
-      <!-- Legal Disclaimer -->
+      <!-- 3. Money Transfer & Banking -->
+      <div class="card">
+        <div class="card-header">
+          <div class="icon-box"><i data-lucide="indian-rupee"></i></div>
+          <div>
+            <div class="price-pill">Instant Transfer</div>
+            <div class="card-title">Domestic Money Transfer & AEPS</div>
+          </div>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 12px;">
+          Quick financial access in rural areas. Send money directly to any nationalized bank account across India or withdraw cash using your biometric fingerprint without visiting an ATM.
+        </p>
+        <ul class="service-list">
+          <li><i data-lucide="check"></i> Instant Domestic Money Transfer (IMPS / NEFT) to any Indian Bank</li>
+          <li><i data-lucide="check"></i> AEPS (Aadhaar Card Cash Withdrawal & Balance Enquiry)</li>
+          <li><i data-lucide="check"></i> Electricity (TNEB), Gas, Water, and DTH Bill Payments</li>
+          <li><i data-lucide="check"></i> Mobile Recharge & Fastag Top-up Support</li>
+        </ul>
+        <a href="https://wa.me/917845865414?text=Hello,%20I%20need%20assistance%20with%20Money%20Transfer." class="btn btn-outline" style="padding: 10px; font-size: 0.85rem;">Enquire on WhatsApp</a>
+      </div>
+
+      <!-- 4. Digital Printing & DTP -->
+      <div class="card">
+        <div class="card-header">
+          <div class="icon-box"><i data-lucide="printer"></i></div>
+          <div>
+            <div class="price-pill">High Quality</div>
+            <div class="card-title">Digital Printing, Xerox & Lamination</div>
+          </div>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 12px;">
+          High-definition monochrome and color printouts for educational documents, project reports, resumes, and photo IDs.
+        </p>
+        <ul class="service-list">
+          <li><i data-lucide="check"></i> High-Speed B/W & Color Xerox and Document Scanning</li>
+          <li><i data-lucide="check"></i> Resume / Bio-Data Typing (English & Tamil Font Formatting)</li>
+          <li><i data-lucide="check"></i> Glossy PVC Card Printing (Aadhaar, Voter ID, Smart Card, Health Card)</li>
+          <li><i data-lucide="check"></i> Thermal Document Lamination & Spiral Binding</li>
+        </ul>
+        <a href="https://wa.me/917845865414?text=Hello,%20I%20need%20Printing/Scanning%20help." class="btn btn-outline" style="padding: 10px; font-size: 0.85rem;">Send Files for Printing</a>
+      </div>
+
+      <!-- Disclaimer -->
       <div class="disclaimer">
-        <strong>Disclaimer:</strong> We are a private digital service centre. We are not affiliated with, endorsed by, or acting on behalf of any government body, and submitting an application does not guarantee its approval.
+        <strong>Disclaimer:</strong> Raja's Tech Solutions is an independent private digital assistance centre. We are not an official government department and we do not issue legal certificates directly. All applications are officially submitted through verified government portals on behalf of customers.
       </div>
     </section>
 
-    <!-- WhatsApp Enquiry Form -->
+    <!-- YouTube Section -->
+    <section id="youtube" style="padding-top: 20px;">
+      <div class="section-title">Video Guides</div>
+      <h3 class="heading-lg">Watch Online Tutorials</h3>
+      <div class="card">
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 14px;">
+          நாங்கள் எங்கள் YouTube சேனலில் அரசு சேவைகள், விண்ணப்ப படிவங்கள், மற்றும் ஆன்லைன் டிப்ஸ் குறித்த தெளிவான வீடியோக்களை தொடர்ந்து பதிவேற்றி வருகிறோம்.
+        </p>
+
+        <!-- YouTube Video Embed Frame -->
+        <div class="video-wrapper">
+          <iframe 
+            src="https://www.youtube-nocookie.com/embed/videoseries?list=PL0" 
+            title="Raja's Tech Solutions YouTube Channel" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <p style="font-size: 0.85rem; color: #cbd5e1; margin-bottom: 16px;">
+          புதிய அரசு திட்டங்கள், ஆன்லைன் சான்றிதழ் விண்ணப்பிக்கும் முறைகள் மற்றும் டெக்னாலஜி வழிகாட்டல்களை உடனுக்குடன் பெற எங்கள் YouTube சேனலை சப்ஸ்கிரைப் செய்யுங்கள்!
+        </p>
+
+        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="btn btn-yt">
+          <i data-lucide="youtube"></i> Visit & Subscribe to Our Channel
+        </a>
+      </div>
+    </section>
+ <!-- WhatsApp Enquiry Form -->
     <section style="padding-top: 20px;">
       <div class="section-title">Quick Enquiry</div>
-      <h3 class="heading-lg">Send an Enquiry</h3>
+      <h3 class="heading-lg">Send an Online Request</h3>
       <div class="card">
         <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">
-          Submitting opens WhatsApp directly with your details prefilled.
+          Fill out this form to connect with us immediately on WhatsApp with your query details prefilled.
         </p>
 
         <form id="enquiryForm" onsubmit="handleFormSubmit(event)">
           <div class="form-group">
-            <label for="userName">Your Name *</label>
-            <input type="text" id="userName" class="form-control" placeholder="e.g. Ramesh Kumar" required>
+            <label for="userName">Full Name *</label>
+            <input type="text" id="userName" class="form-control" placeholder="e.g. Maharajan" required>
           </div>
 
           <div class="form-group">
@@ -525,26 +658,25 @@
           </div>
 
           <div class="form-group">
-            <label for="serviceReq">Service Required *</label>
+            <label for="serviceReq">Service Category *</label>
             <select id="serviceReq" class="form-control" required>
-              <option value="">Select a service</option>
-              <option value="Money Transfer & Cash Services">Money Transfer & Cash Services</option>
-              <option value="Photocopy & Scan">Photocopy & Scan</option>
-              <option value="Digital / Colour Printing">Digital / Colour Printing</option>
-              <option value="Government E-Service Forms">Govt E-Service Certificate Applications</option>
-              <option value="PAN Card / Smart Card / Voter ID">PAN / Smart Card / Voter ID</option>
-              <option value="Document Typing & PDF Work">Document Typing & PDF Work</option>
+              <option value="">Select a service category</option>
+              <option value="Government E-Service Forms">Government E-Service Certificate Applications</option>
+              <option value="PAN Card Application / Correction">PAN Card Application / Correction</option>
+              <option value="Money Transfer & Cash Withdrawal">Money Transfer & AEPS Cash Withdrawal</option>
+              <option value="Photocopy, Printing & Lamination">Photocopy, Printing & Lamination</option>
+              <option value="Document Typing & PDF Work">Document Typing & PDF Formatting</option>
               <option value="Other Computer Services">Other Computer Services</option>
             </select>
           </div>
 
           <div class="form-group">
-            <label for="userMsg">Message (Optional)</label>
-            <textarea id="userMsg" class="form-control" rows="3" placeholder="Tell us briefly what you need..."></textarea>
+            <label for="userMsg">Message / Specific Requirements</label>
+            <textarea id="userMsg" class="form-control" rows="3" placeholder="Explain your required document or service here..."></textarea>
           </div>
 
           <button type="submit" class="btn btn-whatsapp" style="width: 100%; margin-top: 10px;">
-            <i data-lucide="message-circle"></i> Send via WhatsApp
+            <i data-lucide="message-circle"></i> Send Request via WhatsApp
           </button>
         </form>
       </div>
@@ -552,13 +684,13 @@
 
     <!-- Contact & Location Section -->
     <section id="contact" style="padding-top: 20px;">
-      <div class="section-title">Get In Touch</div>
+      <div class="section-title">Contact Information</div>
       <h3 class="heading-lg">Visit Us or Reach Out</h3>
 
       <a href="tel:+917845865414" class="contact-item">
         <div class="icon-box"><i data-lucide="phone"></i></div>
         <div class="info">
-          <h4>Call Now</h4>
+          <h4>Customer Care Call</h4>
           <p>+91 7845865414</p>
         </div>
       </a>
@@ -566,15 +698,14 @@
       <a href="https://wa.me/917845865414" class="contact-item">
         <div class="icon-box" style="color: var(--green-whatsapp);"><i data-lucide="message-circle"></i></div>
         <div class="info">
-          <h4>Chat on WhatsApp</h4>
+          <h4>Direct WhatsApp Support</h4>
           <p>+91 7845865414</p>
         </div>
       </a>
 
       <a href="mailto:rajastechsolutions@gmail.com" class="contact-item">
-        <div class="icon-box" style="color: var(--cyan-accent);"><i data-lucide="mail"></i></div>
         <div class="info">
-          <h4>Email Us</h4>
+          <h4>Email Inquiries</h4>
           <p>rajastechsolutions@gmail.com</p>
         </div>
       </a>
@@ -582,32 +713,106 @@
       <div class="contact-item">
         <div class="icon-box"><i data-lucide="map-pin"></i></div>
         <div class="info">
-          <h4>Shop Address</h4>
-          <p>Muthu Complex, Murappanadu, Tirunelveli - Thoothukudi Road, Tamil Nadu</p>
+          <h4>Office & Centre Address</h4>
+          <p>Muthu Complex, Murappanadu, Tirunelveli - Thoothukudi Road, Tamil Nadu - 628252</p>
         </div>
       </div>
 
       <div class="contact-item">
         <div class="icon-box"><i data-lucide="clock"></i></div>
         <div class="info">
-          <h4>Business Hours</h4>
-          <p>Mon - Sat: 9:00 AM - 8:30 PM<br><span style="color: #f87171;">Sunday: Closed</span></p>
+          <h4>Operational Hours</h4>
+          <p>Monday - Saturday: 9:00 AM - 8:30 PM<br><span style="color: #f87171;">Sunday: Closed</span></p>
         </div>
       </div>
     </section>
 
   </div>
 
-  <!-- Footer -->
+  <!-- Footer with Legal Modals -->
   <footer>
     <p><strong>Raja's Tech Solutions</strong></p>
     <p style="margin: 6px 0;">Muthu Complex, Murappanadu, Tamil Nadu</p>
+    
+    <!-- AdSense Mandatory Legal Links -->
+    <div class="legal-links">
+      <a href="javascript:void(0)" onclick="openModal('aboutModal')">About Us</a>
+      <a href="javascript:void(0)" onclick="openModal('privacyModal')">Privacy Policy</a>
+      <a href="javascript:void(0)" onclick="openModal('termsModal')">Terms & Conditions</a>
+      <a href="javascript:void(0)" onclick="openModal('disclaimerModal')">Disclaimer</a>
+    </div>
+
     <p style="font-size: 0.75rem; color: #64748b;">© 2026 Raja's Tech Solutions. All rights reserved.</p>
   </footer>
+
+  <!-- MODALS FOR ADSENSE COMPLIANCE -->
+
+  <!-- About Modal -->
+  <div id="aboutModal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeModal('aboutModal')">&times;</span>
+      <h3>About Raja's Tech Solutions</h3>
+      <p>Raja's Tech Solutions is a local technology and citizen service center operating at Muthu Complex, Murappanadu, Tamil Nadu.</p>
+      <p>Our mission is to bridge the digital gap in rural and semi-urban communities by offering affordable, transparent, and accurate assistance for government certificates, PAN card facilitation, internet job applications, money transfers, and document services.</p>
+    </div>
+  </div>
+
+  <!-- Privacy Policy Modal -->
+  <div id="privacyModal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeModal('privacyModal')">&times;</span>
+      <h3>Privacy Policy</h3>
+      <p>At Raja's Tech Solutions, we respect your privacy and take user data security seriously.</p>
+      <p><strong>Information Collection:</strong> We only collect customer details (such as name, phone number, and service requirements) willingly provided through our enquiry forms or WhatsApp for customer support.</p>
+      <p><strong>Third-Party Advertising:</strong> We use third-party advertising companies, including Google AdSense, to serve ads when you visit our website. These companies may use cookies (such as the DoubleClick cookie) to serve ads based on your prior visits to this and other websites on the internet.</p>
+      <p>Users may opt out of personalized advertising by visiting Google Ads Settings.</p>
+    </div>
+  </div>
+
+  <!-- Terms Modal -->
+  <div id="termsModal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeModal('termsModal')">&times;</span>
+      <h3>Terms & Conditions</h3>
+      <p>By accessing and utilizing the services of Raja's Tech Solutions, you agree to the following conditions:</p>
+      <ul>
+        <li>You ensure all personal details and original documents submitted for application filling are genuine and legally valid.</li>
+        <li>We act solely as an application facilitator and technological intermediary. Final approval or rejection of any government certificate or card lies solely with the respective government departments.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Disclaimer Modal -->
+  <div id="disclaimerModal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeModal('disclaimerModal')">&times;</span>
+      <h3>Disclaimer</h3>
+      <p>Raja's Tech Solutions is an independent private enterprise. We are not affiliated with the Government of Tamil Nadu, the Government of India, or any statutory authority.</p>
+      <p>All service charges collected are purely service fees for computer data entry, scanning, printing, and technological facilitation.</p>
+    </div>
+  </div>
 
   <script>
     // Initialize Lucide Icons
     lucide.createIcons();
+
+    // Modal Control Functions
+    function openModal(id) {
+      document.getElementById(id).style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    window.onclick = function(event) {
+      if (event.target.classList.contains('modal')) {
+        event.target.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    };
 
     // Handle Form to WhatsApp Redirection
     function handleFormSubmit(event) {
